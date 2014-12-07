@@ -1,0 +1,23 @@
+<head>
+  <title>eventi</title>
+</head>
+
+<body>
+	<header>
+		{{> loginButtons}}
+		<div class="title-wrapper">
+			<h1 id="top-title">eventi</h1>
+		</div>
+		{{>menuToggle}}
+	</header>
+	{{>menu}}
+	<div id="content">
+		
+		
+		{{#if currentUser}}
+			{{> loggedin }}
+		{{else}}
+			{{> notLoggedin }}
+		{{/if}}
+  	</div>
+</body>

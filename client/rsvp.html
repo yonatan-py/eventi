@@ -1,0 +1,13 @@
+<template name="rsvp">
+	{{#each RSVPs}}
+		<div class="rsvp">
+			<div class="title">
+				{{title}}
+			</div>
+			<div class="rsvp">
+				<input type="radio" name="rsvp" value="going"/>going
+				<input type="radio" name="rsvp" value="not-going"/>not-going
+			</div>					
+		</div>
+	{{/each}}
+</template>
