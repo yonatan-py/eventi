@@ -6,5 +6,12 @@ Template.loggedin.helpers({
 	},
 	showNewEvent: function  () {
 		return Session.get('main-view') == 'new-event' ? 'new-event' : '';		
+	},
+	showEventsUAdmin: function  () {
+		return Session.get('main-view') == 'events-u-admin' ? 'events-u-admin' : '';		
+	},
+	showAdminEvent: function  () {
+		return Session.get('main-view') == 'admin-event' ? 'admin-event' : '';		
 	}
 });
+

@@ -2,6 +2,7 @@
 	{
 		"type": "demonstraion", 
 		"users": [],
+		"admins": [],
 		"title": "demonstraion against accupation",
 		"location": null,
 		"time": null
@@ -9,6 +10,7 @@
 	{
 		"type": "stand", 
 		"users": [],
+		"admins": [],
 		"title": "stand in jafa",
 		"location": null,
 		"time": null
