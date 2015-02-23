@@ -8,7 +8,6 @@ Meteor.methods({
 				rsvp: false
 			});
 		}
-
 		Events.insert({
 			date: event.date,
 			title: event.title,
