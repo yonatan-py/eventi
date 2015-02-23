@@ -1,0 +1,17 @@
+<template name="adminEvent">
+	{{event.title}}
+	<br/>
+	{{#each event.users}}
+		{{userId}} <br/>
+		{{#if rsvp}}
+			{{#if going}}
+				going
+			{{else}}
+				not going
+			{{/if}}
+		{{else}}
+			no rsvp
+		{{/if}}
+		<br/>
+	{{/each}}
+</template>

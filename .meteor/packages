@@ -10,4 +10,5 @@ accounts-ui
 accounts-password
 bootstrap
 accounts-google
+msavin:mongoinspector
 

@@ -11,20 +11,26 @@ if(Meteor.users.find().count() == 0){
 		Events.insert(events[event]);
 	}
 
+	var doron = Meteor.users.findOne({username: "doron"});
+	var shai = Meteor.users.findOne({username: "shai"});
+
 	// put some users in events
 	var demo = Events.findOne({title: "demonstraion against accupation"});
 	var stand = Events.findOne({title: "stand in jafa"});
 
-	var doron = Meteor.users.findOne({username: "doron"});
-	var shai = Meteor.users.findOne({username: "shai"});
+
 
 	demo.users.push({userId:doron._id, rsvp: false});
 	demo.users.push({userId: shai._id, rsvp: false});
+	demo.admins.push(doron._id);
+	demo.admins.push(shai._id);
 
 	Events.update(demo._id, demo);
 
 	stand.users.push({userId:doron._id, rsvp: false});
 	stand.users.push({userId: shai._id, rsvp: false});
+	stand.admins.push(doron._id);
+	stand.admins.push(shai._id);
 
 	Events.update(stand._id, stand);
 }
