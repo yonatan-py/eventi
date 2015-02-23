@@ -8,7 +8,6 @@ Meteor.methods({
 				rsvp: false
 			});
 		}
-
 		Events.insert({
 			date: event.date,
 			title: event.title,
@@ -16,5 +15,13 @@ Meteor.methods({
 			users: users,
             location: event.location
 		});
-	}
+	},
+    'addUser': function(user) {
+        var userId = Accounts.createUser({
+            username: user.username,
+            email: user.email
+        });
+        Meteor.users.update(userId, {$set: {phone: user.phone}});
+    }
+
 })

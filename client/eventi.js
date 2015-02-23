@@ -12,6 +12,12 @@ Template.loggedin.helpers({
 	},
 	showAdminEvent: function  () {
 		return Session.get('main-view') == 'admin-event' ? 'admin-event' : '';		
-	}
+	},
+    showUsers: function  () {
+        return Session.get('main-view') == 'users' ? 'users' : '';
+    },
+    showNewUser: function  () {
+        return Session.get('main-view') == 'new-user' ? 'new-user' : '';
+    }
 });
 
