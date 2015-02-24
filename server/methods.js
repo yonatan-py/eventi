@@ -13,7 +13,8 @@ Meteor.methods({
 			title: event.title,
 			admins: [this.userId],
 			users: users,
-            location: event.location
+            location: event.location,
+            notifications: getDefaultNotifications(event.date)
 		});
 	},
     'addUser': function(user) {
