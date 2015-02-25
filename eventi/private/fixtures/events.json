@@ -5,7 +5,7 @@
 		"admins": [],
 		"title": "demonstraion against accupation",
 		"location": null,
-		"time": null
+        "time": "2015-02-25T23:59:00.511Z"
 	},
 	{
 		"type": "stand", 
@@ -13,6 +13,6 @@
 		"admins": [],
 		"title": "stand in jafa",
 		"location": null,
-		"time": null
+		"time": "2015-02-25T23:59:00.511Z"
 	}
 ]

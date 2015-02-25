@@ -24,5 +24,4 @@ Meteor.methods({
         });
         Meteor.users.update(userId, {$set: {phone: user.phone}});
     }
-
-})
+});
