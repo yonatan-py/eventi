@@ -9,12 +9,12 @@ Meteor.methods({
 			});
 		}
 		Events.insert({
-			date: event.date,
+			time: event.time,
 			title: event.title,
 			admins: [this.userId],
 			users: users,
             location: event.location,
-            notifications: getDefaultNotifications(event.date)
+            notifications: getDefaultNotifications(event.time)
 		});
 	},
     'addUser': function(user) {
@@ -24,5 +24,4 @@ Meteor.methods({
         });
         Meteor.users.update(userId, {$set: {phone: user.phone}});
     }
-
-})
+});

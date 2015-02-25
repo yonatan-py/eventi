@@ -12,22 +12,28 @@ events = function () {
 }
 
 getDefaultNotifications = function(date){
-    var oneDay = 1000*60*60*24;
+    console.log('date: ', date)
+    var date = new Date(date);
+    var oneDay = 1000 * 60 * 60 * 24;
     var now = new Date;
+    console.log('now: ', now);
     if(now > date){
         return [];
     }
     var diff = date - now;
+    console.log('set: ', diff);
     diff = diff / oneDay;
+    console.log('divide: ', diff);
     var halfWay = new Date;
+
     halfWay.setDate(halfWay.getDate() + diff / 2);
-    return [
-            {
-                date: now,
+    console.log('halfway: ', halfWay);
+    return [{
+                time: now,
                 done: false
             },
             {
-                date: halfWay,
+                time: halfWay,
                 done: false
             }
     ];
