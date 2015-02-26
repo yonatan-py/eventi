@@ -19,13 +19,13 @@ for event in events.find():
 	if not date or date < now:
 		continue
 	notifications = event.get('notifications')
-	for notification in notifications:
-		# ipdb.set_trace()
+	for i, notification in enumerate(notifications):
 		if not notification.get('done') and notification.get('time') < now:
-			print notification.get('time')
-			
 			for user in event.get('users'):
 				email_notfication_sender.send(user, event)
+			event['notifications'][i]['done'] = True
+			break
+	events.update({"_id": event.get('_id')}, {"$set": {"notifications": notifications}})
 
 
 
